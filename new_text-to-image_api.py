@@ -32,90 +32,7 @@ port = os.environ.get('PORT', 3008)
 
 ######## UPON LOAD (1ST) ########
 
-def load_dalle_model():
-    ## Load dalle-mini
-    model, params = DalleBart.from_pretrained(
-        DALLE_MODEL, revision=DALLE_COMMIT_ID, dtype=jnp.float16, _do_init=False
-    )
 
-    ## Load VQGAN
-    vqgan, vqgan_params = VQModel.from_pretrained(
-        VQGAN_REPO, revision=VQGAN_COMMIT_ID, _do_init=False
-    )
-
-    return model, params, vqgan, vqgan_params, 
-
-
-def replicate_parameters():
-    return replicate(params), replicate(vqgan_params)
-
-
-## Model functions are compiled and parallelized to take advantage of multiple devices
-## model inference
-@partial(jax.pmap, axis_name="batch", static_broadcasted_argnums=(3, 4, 5, 6))
-def p_generate(
-    tokenized_prompt, key, params, top_k, top_p, temperature, condition_scale
-):
-    return model.generate(
-        **tokenized_prompt,
-        prng_key=key,
-        params=params,
-        top_k=top_k,
-        top_p=top_p,
-        temperature=temperature,
-        condition_scale=condition_scale,
-    )
-
-## decode image
-@partial(jax.pmap, axis_name="batch")
-def p_decode(indices, params):
-    return vqgan.decode_code(indices, params=params)
-
-
-def random_device_key_generator():
-    return random.randint(0, 2**32 - 1), jax.random.PRNGKey(seed)
-
-
-def image_generator(number, name):
-    if type(name) != str:
-        print('name of image must be string')
-        return
-    
-    ## number of predictions per prompt
-    n_predictions = number
-
-    ## We can customize generation parameters (see https://huggingface.co/blog/how-to-generate)
-    gen_top_k = None
-    gen_top_p = None
-    temperature = None
-    cond_scale = 10.0
-
-    print(f"Prompts: {prompts}\n")
-    ## generate images
-    images = []
-    for i in trange(max(n_predictions // jax.device_count(), 1)):
-        ## get a new key
-        key, subkey = jax.random.split(key)
-        # generate images
-        encoded_images = p_generate(
-            tokenized_prompt,
-            shard_prng_key(subkey),
-            params,
-            gen_top_k,
-            gen_top_p,
-            temperature,
-            cond_scale,
-        )
-        # remove BOS
-        encoded_images = encoded_images.sequences[..., 1:]
-        # decode images
-        decoded_images = p_decode(encoded_images, vqgan_params)
-        decoded_images = decoded_images.clip(0.0, 1.0).reshape((-1, 256, 256, 3))
-        for decoded_img in decoded_images:
-            img = Image.fromarray(np.asarray(decoded_img * 255, dtype=np.uint8))
-            images.append(img)
-            img.save('gen_image_'+name+'.jpg')
-    return
 
 
 ######## UPON REQUEST ########
@@ -156,17 +73,46 @@ def text_to_image():
 
     print('loading model and tokens:',datetime.datetime.now())
     ## Load models & tokenizer: LONG LOAD TIME ON FIRST USE
-    model, params, vqgan, vqgan_params = load_dalle_model()
+    ## Load dalle-mini
+    model, params = DalleBart.from_pretrained(
+        DALLE_MODEL, revision=DALLE_COMMIT_ID, dtype=jnp.float16, _do_init=False
+    )
+
+    ## Load VQGAN
+    vqgan, vqgan_params = VQModel.from_pretrained(
+        VQGAN_REPO, revision=VQGAN_COMMIT_ID, _do_init=False
+    )
     print('models and tokens loaded:',datetime.datetime.now(),'\n')
 
     print('replicating params:',datetime.datetime.now())
     ## Model parameters are replicated on each device for faster inference
-    params, vqgan_params = replicate_parameters()
+    params, vqgan_params = replicate(params), replicate(vqgan_params)
+    ## Model functions are compiled and parallelized to take advantage of multiple devices
+    ## model inference
+    @partial(jax.pmap, axis_name="batch", static_broadcasted_argnums=(3, 4, 5, 6))
+    def p_generate(
+        tokenized_prompt, key, params, top_k, top_p, temperature, condition_scale
+    ):
+        return model.generate(
+            **tokenized_prompt,
+            prng_key=key,
+            params=params,
+            top_k=top_k,
+            top_p=top_p,
+            temperature=temperature,
+            condition_scale=condition_scale,
+        )
+
+    ## decode image
+    @partial(jax.pmap, axis_name="batch")
+    def p_decode(indices, params):
+        return vqgan.decode_code(indices, params=params)
     print('params replicated:',datetime.datetime.now(),'\n')
 
     print('generating keys:',datetime.datetime.now())
     ## Keys are passed to the model on each device to generate unique inference per device.
-    seed, key = random_device_key_generator()
+    seed = random.randint(0, 2**32 - 1)
+    key = jax.random.PRNGKey(seed)
     print('keys generated:',datetime.datetime.now(),'\n')
 
     print('processing prompts:',datetime.datetime.now())
@@ -178,7 +124,48 @@ def text_to_image():
 
     print('generating images:',datetime.datetime.now())
     ## Generate images using dalle-mini model and decode them with the VQGAN.
-    output_images = image_generator(preds_per_prompt, 'test')
+    name = 'test'
+    if type(name) != str:
+        print('name of image must be string')
+        return
+    ## number of predictions per prompt
+    n_predictions = preds_per_prompt
+    ## We can customize generation parameters (see https://huggingface.co/blog/how-to-generate)
+    gen_top_k = None
+    gen_top_p = None
+    temperature = None
+    cond_scale = 10.0
+
+    print(f"Prompts: {PROMPTS}\n")
+    ## generate images
+    images = []
+    for i in trange(max(n_predictions // jax.device_count(), 1)):
+        ## get a new key
+        print('getting new key:',datetime.datetime.now())
+        key, subkey = jax.random.split(key)
+        # generate images
+        print('encoding images:',datetime.datetime.now())
+        encoded_images = p_generate(
+            tokenized_prompt,
+            shard_prng_key(subkey),
+            params,
+            gen_top_k,
+            gen_top_p,
+            temperature,
+            cond_scale,
+        )
+        # remove BOS
+        print('remove bos:',datetime.datetime.now())
+        encoded_images = encoded_images.sequences[..., 1:]
+        # decode images
+        print('decoding images:',datetime.datetime.now())
+        decoded_images = p_decode(encoded_images, vqgan_params)
+        decoded_images = decoded_images.clip(0.0, 1.0).reshape((-1, 256, 256, 3))
+        for decoded_img in decoded_images:
+            img = Image.fromarray(np.asarray(decoded_img * 255, dtype=np.uint8))
+            images.append(img)
+            img.save('gen_image_'+name+'.jpg')
+            
     print('images generated:',datetime.datetime.now(),'\n')
 
     print('request returned:',datetime.datetime.now())
@@ -189,6 +176,7 @@ def text_to_image():
 ######## UPON LOAD (2ND) ########
     
 if __name__ == "__main__":
+    import tensorflow as tf
     print('api loaded:',datetime.datetime.now(),'\n')
     #app.run(host='0.0.0.0',port=port)
     app.run(host='0.0.0.0',port=port,debug=True)
