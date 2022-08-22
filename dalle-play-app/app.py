@@ -15,15 +15,18 @@ app = Flask(__name__)
 CORS(app)
 print("--> Starting DALL-E Server. This might take up to two minutes.")
 
-import subprocess as sp
+##import subprocess as sp
+##
+##def get_gpu_memory():
+##    command = "nvidia-smi --query-gpu=memory.free --format=csv"
+##    memory_free_info = sp.check_output(command.split()).decode('ascii').split('\n')[:-1][1:]
+##    memory_free_values = [int(x.split()[0]) for i, x in enumerate(memory_free_info)]
+##    return memory_free_values
+##
+##print(get_gpu_memory())
 
-def get_gpu_memory():
-    command = "nvidia-smi --query-gpu=memory.free --format=csv"
-    memory_free_info = sp.check_output(command.split()).decode('ascii').split('\n')[:-1][1:]
-    memory_free_values = [int(x.split()[0]) for i, x in enumerate(memory_free_info)]
-    return memory_free_values
-
-print(get_gpu_memory())
+from numba import cuda 
+device = cuda.get_current_device()
     
 os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
