@@ -16,15 +16,14 @@ CORS(app)
 print("--> Starting DALL-E Server. This might take up to two minutes.")
 
 import subprocess as sp
-    import os
 
-    def get_gpu_memory():
-        command = "nvidia-smi --query-gpu=memory.free --format=csv"
-        memory_free_info = sp.check_output(command.split()).decode('ascii').split('\n')[:-1][1:]
-        memory_free_values = [int(x.split()[0]) for i, x in enumerate(memory_free_info)]
-        return memory_free_values
+def get_gpu_memory():
+    command = "nvidia-smi --query-gpu=memory.free --format=csv"
+    memory_free_info = sp.check_output(command.split()).decode('ascii').split('\n')[:-1][1:]
+    memory_free_values = [int(x.split()[0]) for i, x in enumerate(memory_free_info)]
+    return memory_free_values
 
-    print(get_gpu_memory())
+print(get_gpu_memory())
     
 os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
