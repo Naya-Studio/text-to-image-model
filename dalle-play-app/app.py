@@ -11,8 +11,6 @@ from consts import DEFAULT_IMG_OUTPUT_DIR
 from utils import parse_arg_boolean, parse_arg_dalle_version
 from consts import ModelSize
 
-os.environ['CUDA_VISIBLE_DEVICES'] = "0"
-
 app = Flask(__name__)
 CORS(app)
 print("--> Starting DALL-E Server. This might take up to two minutes.")
@@ -71,4 +69,18 @@ with app.app_context():
 
 
 if __name__ == "__main__":
+
+    import subprocess as sp
+    import os
+
+    def get_gpu_memory():
+        command = "nvidia-smi --query-gpu=memory.free --format=csv"
+        memory_free_info = sp.check_output(command.split()).decode('ascii').split('\n')[:-1][1:]
+        memory_free_values = [int(x.split()[0]) for i, x in enumerate(memory_free_info)]
+        return memory_free_values
+
+    print(get_gpu_memory())
+
+    os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+    
     app.run(host="0.0.0.0", port=args.port, debug=False)
