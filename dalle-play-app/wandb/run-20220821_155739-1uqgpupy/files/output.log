@@ -1,0 +1,4 @@
+usage: app.py [-h] [--port PORT] [--model_version MODEL_VERSION]
+              [--save_to_disk SAVE_TO_DISK] [--img_format {jpeg,png}]
+              [--output_dir OUTPUT_DIR]
+app.py: error: argument --save_to_disk: expected one argument

@@ -1,0 +1,97 @@
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/linen/transforms.py:138: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.
+  new_args, new_kwargs = jax.tree_map(get_arg_scope, (args, kwargs))
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/linen/transforms.py:157: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.
+  jax.tree_map(get_scopes_inner, attrs)
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/lift.py:112: FutureWarning: jax.tree_flatten is deprecated, and will be removed in a future release. Use jax.tree_util.tree_flatten instead.
+  scopes, treedef = jax.tree_flatten(scope_tree)
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/scope.py:322: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.
+  group[col] = jax.tree_map(lambda x: x, xs[col])
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/lift.py:723: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.
+  lengths = jax.tree_map(find_length, in_axes, args)
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/lift.py:724: FutureWarning: jax.tree_leaves is deprecated, and will be removed in a future release. Use jax.tree_util.tree_leaves instead.
+  lengths = set(jax.tree_leaves(lengths))
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/lift.py:42: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.
+  return jax.tree_map(
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/axes_scan.py:105: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.
+  xs = jax.tree_map(transpose_to_front, in_axes, args)
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/axes_scan.py:123: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.
+  carry_avals = jax.tree_map(
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/axes_scan.py:126: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.
+  scan_avals = jax.tree_map(
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/axes_scan.py:131: FutureWarning: jax.tree_flatten is deprecated, and will be removed in a future release. Use jax.tree_util.tree_flatten instead.
+  in_avals, in_tree = jax.tree_flatten(input_avals)
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/axes_scan.py:109: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.
+  xs = jax.tree_map(lambda ax, arg, x: (arg if ax is broadcast else x),
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/lift.py:172: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.
+  variables = jax.tree_map(lambda x: x, variables)
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/linen/transforms.py:210: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.
+  new_args, new_kwargs = jax.tree_map(
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/linen/transforms.py:235: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.
+  new_attrs = jax.tree_map(set_scopes_inner, attrs)
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/linen/transforms.py:247: FutureWarning: jax.tree_leaves is deprecated, and will be removed in a future release. Use jax.tree_util.tree_leaves instead.
+  jax.tree_leaves(tree)))
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/axes_scan.py:114: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.
+  ys = jax.tree_map(lambda ax, y: (y if ax is broadcast else ()),
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/axes_scan.py:143: FutureWarning: jax.tree_unflatten is deprecated, and will be removed in a future release. Use jax.tree_util.tree_unflatten instead.
+  broadcast_in, constants_out = jax.tree_unflatten(out_tree(), out_flat)
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/axes_scan.py:118: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.
+  ys = jax.tree_map(lambda ax, y: (() if ax is broadcast else y),
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/axes_scan.py:146: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.
+  ys = jax.tree_map(transpose_from_front, out_axes, ys)
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/axes_scan.py:147: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.
+  ys = jax.tree_map(
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/frozen_dict.py:208: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.
+  return jax.tree_map(lambda y: y, x._dict)  # pylint: disable=protected-access
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/transformers/modeling_flax_utils.py:903: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.
+  param_dtypes = jax.tree_map(lambda x: x.dtype, state)
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/scope.py:740: FutureWarning: jax.tree_leaves is deprecated, and will be removed in a future release. Use jax.tree_util.tree_leaves instead.
+  abs_value_flat = jax.tree_leaves(abs_value)
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/scope.py:741: FutureWarning: jax.tree_leaves is deprecated, and will be removed in a future release. Use jax.tree_util.tree_leaves instead.
+  value_flat = jax.tree_leaves(value)
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/scope.py:740: FutureWarning: jax.tree_leaves is deprecated, and will be removed in a future release. Use jax.tree_util.tree_leaves instead.
+  abs_value_flat = jax.tree_leaves(abs_value)
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/scope.py:741: FutureWarning: jax.tree_leaves is deprecated, and will be removed in a future release. Use jax.tree_util.tree_leaves instead.
+  value_flat = jax.tree_leaves(value)
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/linen/transforms.py:138: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.
+  new_args, new_kwargs = jax.tree_map(get_arg_scope, (args, kwargs))
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/linen/transforms.py:157: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.
+  jax.tree_map(get_scopes_inner, attrs)
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/lift.py:112: FutureWarning: jax.tree_flatten is deprecated, and will be removed in a future release. Use jax.tree_util.tree_flatten instead.
+  scopes, treedef = jax.tree_flatten(scope_tree)
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/scope.py:322: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.
+  group[col] = jax.tree_map(lambda x: x, xs[col])
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/lift.py:723: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.
+  lengths = jax.tree_map(find_length, in_axes, args)
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/lift.py:724: FutureWarning: jax.tree_leaves is deprecated, and will be removed in a future release. Use jax.tree_util.tree_leaves instead.
+  lengths = set(jax.tree_leaves(lengths))
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/lift.py:42: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.
+  return jax.tree_map(
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/axes_scan.py:105: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.
+  xs = jax.tree_map(transpose_to_front, in_axes, args)
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/axes_scan.py:123: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.
+  carry_avals = jax.tree_map(
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/axes_scan.py:126: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.
+  scan_avals = jax.tree_map(
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/axes_scan.py:131: FutureWarning: jax.tree_flatten is deprecated, and will be removed in a future release. Use jax.tree_util.tree_flatten instead.
+  in_avals, in_tree = jax.tree_flatten(input_avals)
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/axes_scan.py:109: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.
+  xs = jax.tree_map(lambda ax, arg, x: (arg if ax is broadcast else x),
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/lift.py:172: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.
+  variables = jax.tree_map(lambda x: x, variables)
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/linen/transforms.py:210: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.
+  new_args, new_kwargs = jax.tree_map(
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/linen/transforms.py:235: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.
+  new_attrs = jax.tree_map(set_scopes_inner, attrs)
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/linen/transforms.py:247: FutureWarning: jax.tree_leaves is deprecated, and will be removed in a future release. Use jax.tree_util.tree_leaves instead.
+  jax.tree_leaves(tree)))
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/axes_scan.py:114: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.
+  ys = jax.tree_map(lambda ax, y: (y if ax is broadcast else ()),
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/axes_scan.py:143: FutureWarning: jax.tree_unflatten is deprecated, and will be removed in a future release. Use jax.tree_util.tree_unflatten instead.
+  broadcast_in, constants_out = jax.tree_unflatten(out_tree(), out_flat)
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/axes_scan.py:118: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.
+  ys = jax.tree_map(lambda ax, y: (() if ax is broadcast else y),
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/axes_scan.py:146: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.
+  ys = jax.tree_map(transpose_from_front, out_axes, ys)
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/axes_scan.py:147: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.
+  ys = jax.tree_map(
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flax/core/frozen_dict.py:208: FutureWarning: jax.tree_map is deprecated, and will be removed in a future release. Use jax.tree_util.tree_map instead.

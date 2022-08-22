@@ -1,0 +1,158 @@
+2022-08-21 15:58:23,643 INFO    StreamThr :16087 [internal.py:wandb_internal():90] W&B internal server running at pid: 16087, started at: 2022-08-21 15:58:23.642082
+2022-08-21 15:58:23,648 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: status
+2022-08-21 15:58:23,651 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: status
+2022-08-21 15:58:23,653 DEBUG   SenderThread:16087 [sender.py:send():302] send: header
+2022-08-21 15:58:23,653 INFO    WriterThread:16087 [datastore.py:open_for_write():75] open: /Users/Alex/Documents/naya_studios/pretrained_models/pretrained_model1/dalle-play-app/wandb/run-20220821_155823-9p4ni2tb/run-9p4ni2tb.wandb
+2022-08-21 15:58:23,670 DEBUG   SenderThread:16087 [sender.py:send():302] send: run
+2022-08-21 15:58:24,507 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: check_version
+2022-08-21 15:58:24,517 INFO    SenderThread:16087 [dir_watcher.py:__init__():216] watching files in: /Users/Alex/Documents/naya_studios/pretrained_models/pretrained_model1/dalle-play-app/wandb/run-20220821_155823-9p4ni2tb/files
+2022-08-21 15:58:24,517 INFO    SenderThread:16087 [sender.py:_start_run_threads():913] run started: 9p4ni2tb with start time 1661093903.632764
+2022-08-21 15:58:24,517 DEBUG   SenderThread:16087 [sender.py:send():302] send: summary
+2022-08-21 15:58:24,518 INFO    SenderThread:16087 [sender.py:_save_file():1156] saving file wandb-summary.json with policy end
+2022-08-21 15:58:24,519 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: check_version
+2022-08-21 15:58:25,185 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: run_start
+2022-08-21 15:58:25,189 DEBUG   HandlerThread:16087 [meta.py:__init__():35] meta init
+2022-08-21 15:58:25,189 DEBUG   HandlerThread:16087 [meta.py:__init__():50] meta init done
+2022-08-21 15:58:25,189 DEBUG   HandlerThread:16087 [meta.py:probe():216] probe
+2022-08-21 15:58:25,192 DEBUG   HandlerThread:16087 [meta.py:_setup_git():206] setup git
+2022-08-21 15:58:25,236 DEBUG   HandlerThread:16087 [meta.py:_setup_git():213] setup git done
+2022-08-21 15:58:25,236 DEBUG   HandlerThread:16087 [meta.py:_save_pip():54] save pip
+2022-08-21 15:58:25,237 DEBUG   HandlerThread:16087 [meta.py:_save_pip():68] save pip done
+2022-08-21 15:58:25,238 DEBUG   HandlerThread:16087 [meta.py:probe():254] probe done
+2022-08-21 15:58:25,244 DEBUG   SenderThread:16087 [sender.py:send():302] send: files
+2022-08-21 15:58:25,245 INFO    SenderThread:16087 [sender.py:_save_file():1156] saving file wandb-metadata.json with policy now
+2022-08-21 15:58:25,252 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 15:58:25,253 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 15:58:25,522 INFO    Thread-12 :16087 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/Alex/Documents/naya_studios/pretrained_models/pretrained_model1/dalle-play-app/wandb/run-20220821_155823-9p4ni2tb/files/wandb-summary.json
+2022-08-21 15:58:25,523 INFO    Thread-12 :16087 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/Alex/Documents/naya_studios/pretrained_models/pretrained_model1/dalle-play-app/wandb/run-20220821_155823-9p4ni2tb/files/wandb-metadata.json
+2022-08-21 15:58:25,523 INFO    Thread-12 :16087 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/Alex/Documents/naya_studios/pretrained_models/pretrained_model1/dalle-play-app/wandb/run-20220821_155823-9p4ni2tb/files/requirements.txt
+2022-08-21 15:58:25,686 DEBUG   SenderThread:16087 [sender.py:send():302] send: telemetry
+2022-08-21 15:58:26,376 INFO    Thread-16 :16087 [upload_job.py:push():138] Uploaded file /var/folders/bb/z4nc_k_s4kv89y0pr4s_cx_00000gn/T/tmpep4eejdzwandb/1t7aefyh-wandb-metadata.json
+2022-08-21 15:58:39,559 INFO    Thread-12 :16087 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/Alex/Documents/naya_studios/pretrained_models/pretrained_model1/dalle-play-app/wandb/run-20220821_155823-9p4ni2tb/files/output.log
+2022-08-21 15:58:40,699 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 15:58:40,699 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 15:58:41,561 INFO    Thread-12 :16087 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/Alex/Documents/naya_studios/pretrained_models/pretrained_model1/dalle-play-app/wandb/run-20220821_155823-9p4ni2tb/files/output.log
+2022-08-21 15:58:43,567 INFO    Thread-12 :16087 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/Alex/Documents/naya_studios/pretrained_models/pretrained_model1/dalle-play-app/wandb/run-20220821_155823-9p4ni2tb/files/output.log
+2022-08-21 15:58:45,581 INFO    Thread-12 :16087 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/Alex/Documents/naya_studios/pretrained_models/pretrained_model1/dalle-play-app/wandb/run-20220821_155823-9p4ni2tb/files/output.log
+2022-08-21 15:58:53,730 DEBUG   SenderThread:16087 [sender.py:send():302] send: stats
+2022-08-21 15:58:54,595 INFO    Thread-12 :16087 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/Alex/Documents/naya_studios/pretrained_models/pretrained_model1/dalle-play-app/wandb/run-20220821_155823-9p4ni2tb/files/config.yaml
+2022-08-21 15:58:55,598 INFO    Thread-12 :16087 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/Alex/Documents/naya_studios/pretrained_models/pretrained_model1/dalle-play-app/wandb/run-20220821_155823-9p4ni2tb/files/output.log
+2022-08-21 15:58:55,948 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 15:58:55,949 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 15:59:11,271 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 15:59:11,274 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 15:59:24,321 DEBUG   SenderThread:16087 [sender.py:send():302] send: stats
+2022-08-21 15:59:25,684 INFO    Thread-12 :16087 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/Alex/Documents/naya_studios/pretrained_models/pretrained_model1/dalle-play-app/wandb/run-20220821_155823-9p4ni2tb/files/output.log
+2022-08-21 15:59:26,507 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 15:59:26,508 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 15:59:31,755 INFO    Thread-12 :16087 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/Alex/Documents/naya_studios/pretrained_models/pretrained_model1/dalle-play-app/wandb/run-20220821_155823-9p4ni2tb/files/output.log
+2022-08-21 15:59:33,767 INFO    Thread-12 :16087 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/Alex/Documents/naya_studios/pretrained_models/pretrained_model1/dalle-play-app/wandb/run-20220821_155823-9p4ni2tb/files/output.log
+2022-08-21 15:59:41,747 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 15:59:41,747 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 15:59:55,247 DEBUG   SenderThread:16087 [sender.py:send():302] send: stats
+2022-08-21 15:59:57,004 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 15:59:57,005 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:00:12,248 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:00:12,248 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:00:25,847 DEBUG   SenderThread:16087 [sender.py:send():302] send: stats
+2022-08-21 16:00:27,463 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:00:27,463 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:00:42,677 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:00:42,677 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:00:56,384 DEBUG   SenderThread:16087 [sender.py:send():302] send: stats
+2022-08-21 16:00:57,890 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:00:57,890 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:01:13,100 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:01:13,101 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:01:26,940 DEBUG   SenderThread:16087 [sender.py:send():302] send: stats
+2022-08-21 16:01:28,330 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:01:28,331 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:01:43,548 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:01:43,548 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:01:57,527 DEBUG   SenderThread:16087 [sender.py:send():302] send: stats
+2022-08-21 16:01:58,756 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:01:58,756 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:02:13,976 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:02:13,976 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:02:28,148 DEBUG   SenderThread:16087 [sender.py:send():302] send: stats
+2022-08-21 16:02:29,191 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:02:29,191 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:02:44,418 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:02:44,419 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:02:58,694 DEBUG   SenderThread:16087 [sender.py:send():302] send: stats
+2022-08-21 16:02:59,646 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:02:59,646 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:03:14,854 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:03:14,855 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:03:29,259 DEBUG   SenderThread:16087 [sender.py:send():302] send: stats
+2022-08-21 16:03:30,074 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:03:30,074 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:03:45,281 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:03:45,283 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:03:59,880 DEBUG   SenderThread:16087 [sender.py:send():302] send: stats
+2022-08-21 16:04:00,500 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:04:00,500 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:04:15,722 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:04:15,724 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:04:30,422 DEBUG   SenderThread:16087 [sender.py:send():302] send: stats
+2022-08-21 16:04:30,933 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:04:30,933 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:04:46,151 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:04:46,151 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:05:00,984 DEBUG   SenderThread:16087 [sender.py:send():302] send: stats
+2022-08-21 16:05:01,422 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:05:01,422 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:05:16,704 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:05:16,706 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:05:31,599 DEBUG   SenderThread:16087 [sender.py:send():302] send: stats
+2022-08-21 16:05:31,955 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:05:31,956 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:05:48,623 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:05:48,623 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:06:02,193 DEBUG   SenderThread:16087 [sender.py:send():302] send: stats
+2022-08-21 16:06:04,023 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:06:04,023 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:06:19,237 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:06:19,237 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:06:32,759 DEBUG   SenderThread:16087 [sender.py:send():302] send: stats
+2022-08-21 16:06:34,439 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:06:34,440 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:06:49,654 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:06:49,655 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:07:03,438 DEBUG   SenderThread:16087 [sender.py:send():302] send: stats
+2022-08-21 16:07:04,918 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:07:04,918 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:07:20,135 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:07:20,135 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:07:34,045 DEBUG   SenderThread:16087 [sender.py:send():302] send: stats
+2022-08-21 16:07:35,386 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:07:35,386 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:07:50,595 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:07:50,596 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:08:04,695 DEBUG   SenderThread:16087 [sender.py:send():302] send: stats
+2022-08-21 16:08:05,824 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:08:05,825 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:08:21,047 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:08:21,048 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:08:35,377 DEBUG   SenderThread:16087 [sender.py:send():302] send: stats
+2022-08-21 16:08:36,318 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:08:36,318 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:08:51,550 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:08:51,551 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:09:06,003 DEBUG   SenderThread:16087 [sender.py:send():302] send: stats
+2022-08-21 16:09:06,770 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:09:06,770 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:09:21,985 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:09:21,986 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:09:36,636 DEBUG   SenderThread:16087 [sender.py:send():302] send: stats
+2022-08-21 16:09:37,199 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:09:37,200 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:09:52,418 DEBUG   HandlerThread:16087 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-21 16:09:52,420 DEBUG   SenderThread:16087 [sender.py:send_request():316] send_request: stop_status
+2022-08-21 16:09:54,067 WARNING StreamThr :16087 [internal.py:is_dead():387] Internal process exiting, parent pid 16081 disappeared
+2022-08-21 16:09:54,067 ERROR   StreamThr :16087 [internal.py:wandb_internal():149] Internal process shutdown.
+2022-08-21 16:09:54,428 INFO    HandlerThread:16087 [handler.py:finish():810] shutting down handler
+2022-08-21 16:09:54,633 INFO    SenderThread:16087 [sender.py:finish():1312] shutting down sender
+2022-08-21 16:09:54,673 INFO    WriterThread:16087 [datastore.py:close():279] close: /Users/Alex/Documents/naya_studios/pretrained_models/pretrained_model1/dalle-play-app/wandb/run-20220821_155823-9p4ni2tb/run-9p4ni2tb.wandb
+2022-08-21 16:09:55,621 INFO    MainThread:16087 [internal.py:handle_exit():80] Internal process exited
+2022-08-21 16:09:55,623 WARNING MsgRouterThr:16087 [router.py:message_loop():73] EOFError seen in message_loop

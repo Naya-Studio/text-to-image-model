@@ -1,0 +1,24 @@
+{
+    "os": "macOS-10.16-x86_64-i386-64bit",
+    "python": "3.8.0",
+    "heartbeatAt": "2022-08-21T14:57:39.815208",
+    "startedAt": "2022-08-21T14:57:39.075006",
+    "docker": null,
+    "cpu_count": 4,
+    "cuda": null,
+    "args": [
+        "--save_to_disk"
+    ],
+    "state": "running",
+    "program": "app.py",
+    "codePath": "dalle-play-app/app.py",
+    "git": {
+        "remote": "https://github.com/Naya-Studio/text-to-image-model.git",
+        "commit": "c15a17e4c8e03d21fa5027ce7d30360569357dee"
+    },
+    "email": "alextmutter@gmail.com",
+    "root": "/Users/Alex/Documents/naya_studios/pretrained_models/pretrained_model1",
+    "host": "Alexs-MBP-2",
+    "username": "Alex",
+    "executable": "/Library/Frameworks/Python.framework/Versions/3.8/bin/python3"
+}

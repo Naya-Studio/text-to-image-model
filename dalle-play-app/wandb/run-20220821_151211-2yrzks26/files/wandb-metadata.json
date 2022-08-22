@@ -1,0 +1,27 @@
+{
+    "os": "macOS-10.16-x86_64-i386-64bit",
+    "python": "3.8.0",
+    "heartbeatAt": "2022-08-21T14:12:12.375490",
+    "startedAt": "2022-08-21T14:12:11.683501",
+    "docker": null,
+    "cpu_count": 4,
+    "cuda": null,
+    "args": [
+        "--port",
+        "8080",
+        "--model_version",
+        "mini"
+    ],
+    "state": "running",
+    "program": "app.py",
+    "codePath": "backend/app.py",
+    "git": {
+        "remote": "https://github.com/saharmor/dalle-playground.git",
+        "commit": "a64d0597dfae6aeefb504e8f95a5a6e80ba2f161"
+    },
+    "email": "alextmutter@gmail.com",
+    "root": "/Users/Alex/Documents/naya_studios/pretrained_models/pretrained_model1/dalle_playground/dalle-playground",
+    "host": "Alexs-MBP-2",
+    "username": "Alex",
+    "executable": "/Library/Frameworks/Python.framework/Versions/3.8/bin/python3"
+}
