@@ -24,9 +24,6 @@ print("--> Starting DALL-E Server. This might take up to two minutes.")
 ##    return memory_free_values
 ##
 ##print(get_gpu_memory())
-
-from numba import cuda 
-device = cuda.get_current_device()
     
 os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
