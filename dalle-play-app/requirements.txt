@@ -7,3 +7,5 @@ git+https://github.com/patil-suraj/vqgan-jax.git
 git+https://github.com/borisdayma/dalle-mini.git
 tqdm
 flask-cloudflared
+jax==0.3.14
+jaxlib==0.3.14
