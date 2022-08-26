@@ -7,5 +7,8 @@ git+https://github.com/patil-suraj/vqgan-jax.git
 git+https://github.com/borisdayma/dalle-mini.git
 tqdm
 flask-cloudflared
-jax==0.3.16
-jaxlib==0.3.16
+"jax[cuda111]" -f https://storage.googleapis.com/jax-releases/jax_releases.html
+jaxlib
+pillow
+dalle_mini
+
