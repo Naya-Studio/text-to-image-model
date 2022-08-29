@@ -1,7 +1,7 @@
 FROM nvidia/cuda:11.4.3-cudnn8-devel-ubuntu20.04
 
 # expose
-EXPOSE 8080
+EXPOSE 8000
 
 # set working directory
 WORKDIR /app
@@ -28,4 +28,4 @@ RUN pip3 install --upgrade "jax[cuda]" -f https://storage.googleapis.com/jax-rel
 COPY . /app
 
 # run server
-CMD python3 app.py --port 8080 --model_version mini
+CMD python3 app.py --port 8000 --model_version mini
