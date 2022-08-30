@@ -10,4 +10,5 @@ flask-cloudflared
 jaxlib
 pillow
 dalle_mini
-
+docarray
+"docarray[common]>=0.13.5" jina
