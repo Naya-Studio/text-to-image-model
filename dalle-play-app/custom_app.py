@@ -87,7 +87,27 @@ def image_iteration():
     response = {'generatedImgs': returned_generated_images}
     finish = datetime.now()
     print('total run time:', finish-start)
-    print('iteration worked')
+    print('iteration worked') #temp
+    return jsonify(response)
+
+@app.route("/iterate", methods=["POST"])
+@cross_origin()
+def image_upscale():
+    start = datetime.now()
+    json_data = request.get_json(force=True)
+    image = DocumentArray.from_files(str(json_data["image_path"]))
+
+    ## !Add conditional for storing iterations!
+    
+    upscaled = image.post(f'{FLOW_URL}/upscale')
+
+    ## !Add code for docarray to file!
+    returned_generated_images = upscaled
+    
+    response = {'generatedImgs': returned_generated_images}
+    finish = datetime.now()
+    print('total run time:', finish-start)
+    print('upscale worked') #temp
     return jsonify(response)
 
 
