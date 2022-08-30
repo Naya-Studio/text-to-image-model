@@ -79,7 +79,7 @@ def image_iteration():
 
     ## !Add conditional for storing iterations!
     
-    diffused = image.post(f'{FLOW_URL}', parameters={'skip_rate': skipr, 'num_images': num_it}, target_executor='diffusion').matches
+    diffused = image.post(f'{FLOW_URL}', parameters={'skip_rate': skipr, 'num_images': num_it}, target_executor='diffusion') #.matches
 
     ## !Add code for docarray to file!
     returned_generated_images = diffused
